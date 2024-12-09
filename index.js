@@ -3,6 +3,7 @@ const express = require("express");
 const connectDB = require("./config/db");
 const authRoutes = require("./routes/authRoutes");
 const courseRoutes = require("./routes/courseRoutes");
+const materialRoutes = require('./routes/materialRoutes');
 const cors = require("cors");
 
 // Initialize app and connect DB
@@ -16,6 +17,8 @@ app.use(cors());
 // Routes
 app.use("/api/auth", authRoutes);
 app.use("/api/courses", courseRoutes);
+app.use("/api/materials", materialRoutes);
+
 
 
 // Start server
